@@ -82,7 +82,7 @@ const OptimizedImage = ({
     alt,
     loading: priority ? 'eager' as const : 'lazy' as const,
     decoding: 'async' as const,
-    fetchpriority: priority ? 'high' as const : 'auto' as const,
+    fetchPriority: priority ? 'high' as const : 'auto' as const,
     sizes,
     className: cn(
       'transition-opacity duration-300',
