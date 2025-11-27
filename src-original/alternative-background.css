@@ -1,0 +1,53 @@
+/* Alternative Diagonal Gradient Background Treatment */
+/* Replace the body styles in index.css with this for diagonal gradient version */
+
+body {
+  @apply bg-background text-foreground font-inter;
+  /* Diagonal gradient background treatment */
+  background: linear-gradient(135deg, 
+    hsl(var(--diverz-purple)) 0%, 
+    hsl(220 20% 10%) 25%, 
+    hsl(var(--professional-dark)) 50%, 
+    hsl(220 25% 8%) 75%, 
+    hsl(var(--diverz-pink)) 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Alternative with more subtle diagonal */
+/* 
+body {
+  @apply bg-background text-foreground font-inter;
+  background: linear-gradient(135deg, 
+    hsl(220 30% 4%) 0%, 
+    hsl(var(--professional-dark)) 30%, 
+    hsl(220 25% 8%) 70%, 
+    hsl(220 30% 4%) 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  position: relative;
+}
+*/
+
+/* Main content container styling */
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+/* Grain texture overlay for depth */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 85% 15%, hsla(var(--diverz-purple), 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 15% 85%, hsla(var(--diverz-pink), 0.06) 0%, transparent 40%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}

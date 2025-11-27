@@ -1,0 +1,72 @@
+# Force HTTPS and www for all traffic
+http://dumpsterdiverz.com/* https://www.dumpsterdiverz.com/:splat 301!
+http://www.dumpsterdiverz.com/* https://www.dumpsterdiverz.com/:splat 301!
+https://dumpsterdiverz.com/* https://www.dumpsterdiverz.com/:splat 301!
+
+# Specific rolloff town redirects to prevent 404s (MUST come before wildcard)
+/rolloffs/berthoud /roll-off-dumpsters/berthoud 301!
+/rolloffs/fort-collins /roll-off-dumpsters/fort-collins 301!
+/rolloffs/greeley /roll-off-dumpsters/greeley 301!
+/rolloffs/longmont /roll-off-dumpsters/longmont 301!
+/rolloffs/loveland /roll-off-dumpsters/loveland 301!
+/rolloffs/northern-communities /roll-off-dumpsters/northern-communities 301!
+/rolloffs/severance /roll-off-dumpsters/severance 301!
+/rolloffs/wellington /roll-off-dumpsters/wellington 301!
+/rolloffs/windsor /roll-off-dumpsters/windsor 301!
+
+# Specific rolloff size redirects to prevent 404s
+/rolloffs/12-yard /roll-off-dumpsters/12-yard 301!
+/rolloffs/15-yard /roll-off-dumpsters/15-yard 301!
+/rolloffs/20-yard /roll-off-dumpsters/20-yard 301!
+/rolloffs/30-yard /roll-off-dumpsters/30-yard 301!
+
+# Legacy residential URL redirects (dash format to slash format)
+/residential-windsor /residential/windsor 301!
+/residential-fort-collins /residential/fort-collins 301!
+/residential-wellington /residential/wellington 301!
+/residential-greeley /residential/greeley 301!
+/residential-north-county /residential/north-county 301!
+/residential-severance /residential/severance 301!
+
+# Legacy rolloffs redirects to roll-off-dumpsters
+/rolloffs/* /roll-off-dumpsters/:splat 301!
+
+# Legacy dumpster size redirects
+/roll-off-dumpsters/10-yard /roll-off-dumpsters/12-yard 301!
+/roll-off-dumpsters/40-yard /roll-off-dumpsters/30-yard 301!
+
+# Legacy commercial size redirects
+/commercial/4-yard /commercial 301!
+/commercial/6-yard /commercial 301!
+/commercial/8-yard /commercial 301!
+
+# Legacy knowledge base redirects
+/knowledge-base /help 301!
+/knowledge-base/* /help/:splat 301!
+
+# Additional common URL variations
+# Trailing slash redirects to prevent duplicate content
+/residential/fort-collins/ /residential/fort-collins 301!
+/residential/wellington/ /residential/wellington 301!
+/residential/greeley/ /residential/greeley 301!
+/residential/north-county/ /residential/north-county 301!
+/residential/severance/ /residential/severance 301!
+/residential/windsor/ /residential/windsor 301!
+
+# Prevent case variations
+/residential/Fort-Collins /residential/fort-collins 301!
+/residential/Wellington /residential/wellington 301!
+/residential/Greeley /residential/greeley 301!
+/residential/North-County /residential/north-county 301!
+/residential/Severance /residential/severance 301!
+/residential/Windsor /residential/windsor 301!
+
+# Legacy URL patterns to prevent 404s
+/home / 301!
+/index.html / 301!
+/index.php / 301!
+/default.html / 301!
+/default.php / 301!
+
+# SPA fallback - must be last rule
+/* /index.html 200

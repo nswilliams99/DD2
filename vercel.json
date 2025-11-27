@@ -1,0 +1,225 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": null,
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "dumpsterdiverz.com"
+        }
+      ],
+      "destination": "https://www.dumpsterdiverz.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "/residential-windsor",
+      "destination": "/residential/windsor",
+      "permanent": true
+    },
+    {
+      "source": "/residential-fort-collins",
+      "destination": "/residential/fort-collins",
+      "permanent": true
+    },
+    {
+      "source": "/residential-wellington",
+      "destination": "/residential/wellington",
+      "permanent": true
+    },
+    {
+      "source": "/residential-greeley",
+      "destination": "/residential/greeley",
+      "permanent": true
+    },
+    {
+      "source": "/residential-north-county",
+      "destination": "/residential/north-county",
+      "permanent": true
+    },
+    {
+      "source": "/residential-severance",
+      "destination": "/residential/severance",
+      "permanent": true
+    },
+    {
+      "source": "/rolloffs/berthoud",
+      "destination": "/roll-off-dumpsters/berthoud",
+      "permanent": true
+    },
+    {
+      "source": "/rolloffs/fort-collins",
+      "destination": "/roll-off-dumpsters/fort-collins",
+      "permanent": true
+    },
+    {
+      "source": "/rolloffs/greeley",
+      "destination": "/roll-off-dumpsters/greeley",
+      "permanent": true
+    },
+    {
+      "source": "/rolloffs/longmont",
+      "destination": "/roll-off-dumpsters/longmont",
+      "permanent": true
+    },
+    {
+      "source": "/rolloffs/loveland",
+      "destination": "/roll-off-dumpsters/loveland",
+      "permanent": true
+    },
+    {
+      "source": "/rolloffs/northern-communities",
+      "destination": "/roll-off-dumpsters/northern-communities",
+      "permanent": true
+    },
+    {
+      "source": "/rolloffs/severance",
+      "destination": "/roll-off-dumpsters/severance",
+      "permanent": true
+    },
+    {
+      "source": "/rolloffs/wellington",
+      "destination": "/roll-off-dumpsters/wellington",
+      "permanent": true
+    },
+    {
+      "source": "/rolloffs/windsor",
+      "destination": "/roll-off-dumpsters/windsor",
+      "permanent": true
+    },
+    {
+      "source": "/rolloffs/12-yard",
+      "destination": "/roll-off-dumpsters/12-yard",
+      "permanent": true
+    },
+    {
+      "source": "/rolloffs/15-yard",
+      "destination": "/roll-off-dumpsters/15-yard",
+      "permanent": true
+    },
+    {
+      "source": "/rolloffs/20-yard",
+      "destination": "/roll-off-dumpsters/20-yard",
+      "permanent": true
+    },
+    {
+      "source": "/rolloffs/30-yard",
+      "destination": "/roll-off-dumpsters/30-yard",
+      "permanent": true
+    },
+    {
+      "source": "/rolloffs/(.*)",
+      "destination": "/roll-off-dumpsters/$1",
+      "permanent": true
+    },
+    {
+      "source": "/roll-off-dumpsters/10-yard",
+      "destination": "/roll-off-dumpsters/12-yard",
+      "permanent": true
+    },
+    {
+      "source": "/roll-off-dumpsters/40-yard",
+      "destination": "/roll-off-dumpsters/30-yard",
+      "permanent": true
+    },
+    {
+      "source": "/knowledge-base",
+      "destination": "/help",
+      "permanent": true
+    },
+    {
+      "source": "/knowledge-base/(.*)",
+      "destination": "/help/$1",
+      "permanent": true
+    },
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/index.php",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/default.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/default.php",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/commercial/8-yard",
+      "destination": "/commercial/eight-yard",
+      "permanent": true
+    },
+    {
+      "source": "/commercial/4-yard", 
+      "destination": "/commercial/four-yard",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/sitemap.xml",
+      "destination": "/sitemap.xml"
+    },
+    {
+      "source": "/((?!api|_next|static).*)",
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "index, follow"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*).css",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/static/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}

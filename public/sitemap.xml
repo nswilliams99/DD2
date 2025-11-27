@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Core Pages (Verified Working) -->
+  <url>
+    <loc>https://www.dumpsterdiverz.com/</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.dumpsterdiverz.com/about</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dumpsterdiverz.com/contact</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Main Service Pages (Verified Working) -->
+  <url>
+    <loc>https://www.dumpsterdiverz.com/residential</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.dumpsterdiverz.com/commercial</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.dumpsterdiverz.com/roll-off-dumpsters</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Residential Location Pages (Verified Working) -->
+  <url>
+    <loc>https://www.dumpsterdiverz.com/residential-fort-collins</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dumpsterdiverz.com/residential-wellington</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dumpsterdiverz.com/residential-north-county</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Commercial Size Pages (Verified Working) -->
+  <url>
+    <loc>https://www.dumpsterdiverz.com/commercial/2-yard</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dumpsterdiverz.com/commercial/3-yard</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Roll-off Size Pages (Verified Working) -->
+  <url>
+    <loc>https://www.dumpsterdiverz.com/roll-off-dumpsters/12-yard</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dumpsterdiverz.com/roll-off-dumpsters/15-yard</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dumpsterdiverz.com/roll-off-dumpsters/20-yard</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dumpsterdiverz.com/roll-off-dumpsters/30-yard</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Roll-off Location Pages (Verified Working) -->
+  <url>
+    <loc>https://www.dumpsterdiverz.com/roll-off-dumpsters/fort-collins</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dumpsterdiverz.com/roll-off-dumpsters/wellington</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Utility Pages (Verified Working) -->
+  <url>
+    <loc>https://www.dumpsterdiverz.com/pay-my-bill</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.dumpsterdiverz.com/hoa-services</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>

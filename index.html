@@ -1,0 +1,89 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="publisher" content="Dumpster Diverz, LLC" />
+    <meta property="article:publisher" content="https://www.dumpsterdiverz.com" />
+    <link rel="canonical" href="https://www.dumpsterdiverz.com/" />
+    <title>Dumpster Diverz - Professional Waste Management in Northern Colorado</title>
+    
+    <!-- CRITICAL CSS - Inline for immediate rendering -->
+    <style>
+      /* Reset and base styles */
+      *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+      html{-webkit-text-size-adjust:100%;line-height:1.5;scroll-behavior:smooth}
+      body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;background:hsl(var(--background));color:hsl(var(--foreground))}
+      
+      /* CSS Variables - Critical tokens */
+      :root{
+        --primary-pink:329 86% 45%;
+        --cta-accent:328 77% 62%;
+        --eco-green:148 17% 70%;
+        --soft-neutral:315 51% 94%;
+        --dark-neutral:220 7% 33%;
+        --light-neutral:60 3% 85%;
+        --background:0 0% 100%;
+        --foreground:220 7% 33%;
+        --primary:329 86% 45%;
+        --primary-foreground:0 0% 100%;
+        --secondary:148 17% 70%;
+        --muted:60 3% 85%;
+        --border:60 3% 85%;
+        --radius:0.5rem;
+      }
+      
+      /* Critical layout styles */
+      .container{width:100%;max-width:1280px;margin:0 auto;padding:0 1rem}
+      @media(min-width:768px){.container{padding:0 2rem}}
+      
+      /* Header/Navigation critical styles */
+      header{position:fixed;top:0;left:0;right:0;z-index:50;background:hsl(var(--background));border-bottom:1px solid hsl(var(--border))}
+      nav{display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 1rem}
+      
+      /* Hero section critical styles */
+      .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,hsl(var(--primary-pink)) 0%,hsl(var(--cta-accent)) 50%,hsl(var(--primary-pink)) 100%)}
+      .hero-content{text-align:center;color:hsl(var(--primary-foreground))}
+      .hero h1{font-size:2.5rem;font-weight:700;margin-bottom:1rem;font-family:'Poppins',system-ui,sans-serif}
+      @media(min-width:768px){.hero h1{font-size:3.5rem}}
+      
+      /* Button critical styles */
+      .btn{display:inline-flex;align-items:center;justify-content:center;padding:0.75rem 1.5rem;border-radius:calc(var(--radius) - 2px);font-weight:600;text-decoration:none;transition:all 0.2s;border:none;cursor:pointer}
+      .btn-primary{background:hsl(var(--primary));color:hsl(var(--primary-foreground))}
+      .btn-primary:hover{background:hsl(var(--primary)/0.9)}
+      
+      /* Loading state */
+      .loading{opacity:0;animation:fadeIn 0.3s ease-in forwards}
+      @keyframes fadeIn{to{opacity:1}}
+      
+      /* Font loading */
+      .font-poppins{font-family:'Poppins',system-ui,sans-serif}
+      .font-inter{font-family:'Inter',system-ui,sans-serif}
+      
+      /* Prevent layout shift */
+      img{max-width:100%;height:auto}
+      .aspect-video{aspect-ratio:16/9}
+      .aspect-square{aspect-ratio:1/1}
+      
+      /* Essential gradients */
+      .hero-gradient{background:linear-gradient(135deg,hsl(var(--primary-pink)) 0%,hsl(var(--cta-accent)) 50%,hsl(var(--primary-pink)) 100%)}
+      
+      /* Critical animations */
+      .text-fade-in{animation:fadeIn 0.6s ease-out}
+      @keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+    </style>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cgizicrrzdbzvfniffhw.supabase.co">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

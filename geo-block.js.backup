@@ -1,0 +1,53 @@
+// api/geo-block.js
+export const config = {
+  runtime: 'edge',
+}
+
+export default async function handler(request) {
+  const url = new URL(request.url)
+  const path = url.searchParams.get('path') || '/'
+  
+  // Get location from Vercel's geo headers
+  const country = request.headers.get('x-vercel-ip-country') || 'US'
+  const region = request.headers.get('x-vercel-ip-country-region') || ''
+  
+  // Your geo-blocking logic for trash hauling service areas
+  const allowedRegions = ['CO', 'WY'] // Colorado and Wyoming
+  const allowedCountries = ['US']
+  
+  if (!allowedCountries.includes(country)) {
+    return new Response('Service not available in your area', {
+      status: 403,
+      headers: {
+        'Content-Type': 'text/html',
+      },
+    })
+  }
+  
+  // If in US but outside Colorado/Wyoming, show limited info
+  if (country === 'US' && !allowedRegions.includes(region)) {
+    return new Response(`
+      <!DOCTYPE html>
+      <html>
+        <head>
+          <title>DumpsterDiverz - Service Area Notice</title>
+          <meta name="robots" content="noindex">
+        </head>
+        <body>
+          <h1>Service Area Notice</h1>
+          <p>DumpsterDiverz currently serves the Colorado and Wyoming areas.</p>
+          <p>For service in your area, please contact us at [your phone number]</p>
+          <a href="/">Continue to site</a>
+        </body>
+      </html>
+    `, {
+      status: 200,
+      headers: {
+        'Content-Type': 'text/html',
+      },
+    })
+  }
+  
+  // Allow access to the main site
+  return Response.redirect(new URL(path, request.url))
+}

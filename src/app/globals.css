@@ -1,0 +1,322 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dumpster Diverz Design System */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 303 81% 64%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    /* Dynamic Color System - These are fallback values, overridden by ColorSystemProvider */
+    --color-primary-pink: 331 92% 47%; /* Fallback: Berry Pink */
+    --color-cta-accent: 327 87% 62%; /* Fallback: Raspberry Pink */
+    --color-eco-green: 138 23% 70%; /* Fallback: Eco Green */
+    --color-soft-neutral: 339 53% 94%; /* Fallback: Light Blush */
+    --color-dark-neutral: 218 7% 34%; /* Fallback: Charcoal Gray */
+    --color-light-neutral: 60 3% 85%; /* Fallback: Cool Gray 3 */
+    --color-white: 0 0% 100%; /* Fallback: True White */
+    
+    /* Dynamic primary colors - overridden by ColorSystemProvider */
+    --primary: 331 92% 47%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Professional Neutrals */
+    --professional-dark: 220 15% 15%;
+    --professional-medium: 220 10% 35%;
+    --professional-light: 220 8% 85%;
+    --professional-lighter: 220 8% 96%;
+    
+    /* Accent Colors */
+    --accent-orange: 25 95% 55%;
+    --accent-blue: 210 95% 45%;
+    --accent-success: 142 76% 36%;
+    --accent-warning: 38 92% 50%;
+    
+    /* Legacy aliases for backward compatibility */
+    --industrial-red: 0 84% 45%;
+    --industrial-dark: 220 15% 15%;
+    --industrial-light: 220 8% 96%;
+    --industrial-gray: 220 10% 35%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+    /* Branded background treatment */
+    background: radial-gradient(ellipse at center, hsl(var(--professional-dark)) 0%, hsl(220 25% 8%) 50%, hsl(220 30% 4%) 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  /* Main content container styling */
+  #root {
+    position: relative;
+    z-index: 1;
+    background: transparent;
+  }
+
+  /* Optional: Add subtle texture overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      radial-gradient(circle at 20% 80%, hsla(var(--diverz-purple), 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsla(var(--diverz-pink), 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins font-semibold;
+  }
+}
+
+/* Enhanced utility classes */
+@layer utilities {
+  /* New Color System Background Classes */
+  .bg-primary-pink {
+    background-color: hsl(var(--color-primary-pink));
+  }
+  
+  .bg-cta-accent {
+    background-color: hsl(var(--color-cta-accent));
+  }
+  
+  .bg-eco-green {
+    background-color: hsl(var(--color-eco-green));
+  }
+  
+  .bg-soft-neutral {
+    background-color: hsl(var(--color-soft-neutral));
+  }
+  
+  .bg-dark-neutral {
+    background-color: hsl(var(--color-dark-neutral));
+  }
+  
+  .bg-light-neutral {
+    background-color: hsl(var(--color-light-neutral));
+  }
+  
+  /* Legacy aliases for backward compatibility */
+  .bg-diverz-purple {
+    background-color: hsl(var(--color-primary-pink));
+  }
+  
+  .bg-diverz-purple-dark {
+    background-color: hsl(var(--color-primary-pink));
+  }
+  
+  .bg-diverz-pink {
+    background-color: hsl(var(--color-primary-pink));
+  }
+  
+  .bg-diverz-pink-dark {
+    background-color: hsl(var(--color-primary-pink));
+  }
+  
+  /* Professional Neutrals */
+  .bg-professional-dark {
+    background-color: hsl(var(--professional-dark));
+  }
+  
+  .bg-professional-medium {
+    background-color: hsl(var(--professional-medium));
+  }
+  
+  .bg-professional-light {
+    background-color: hsl(var(--professional-light));
+  }
+  
+  .bg-professional-lighter {
+    background-color: hsl(var(--professional-lighter));
+  }
+  
+  /* Accent Colors */
+  .bg-accent-orange {
+    background-color: hsl(var(--accent-orange));
+  }
+  
+  .bg-accent-blue {
+    background-color: hsl(var(--accent-blue));
+  }
+  
+  .bg-accent-success {
+    background-color: hsl(var(--accent-success));
+  }
+  
+  .bg-accent-warning {
+    background-color: hsl(var(--accent-warning));
+  }
+  
+  /* New Color System Text Classes */
+  .text-primary-pink {
+    color: hsl(var(--color-primary-pink));
+  }
+  
+  .text-cta-accent {
+    color: hsl(var(--color-cta-accent));
+  }
+  
+  .text-eco-green {
+    color: hsl(var(--color-eco-green));
+  }
+  
+  .text-dark-neutral {
+    color: hsl(var(--color-dark-neutral));
+  }
+  
+  .text-light-neutral {
+    color: hsl(var(--color-light-neutral));
+  }
+  
+  /* Legacy aliases for backward compatibility */
+  .text-diverz-purple {
+    color: hsl(var(--color-primary-pink));
+  }
+  
+  .text-diverz-purple-dark {
+    color: hsl(var(--color-primary-pink));
+  }
+  
+  .text-diverz-pink {
+    color: hsl(var(--color-primary-pink));
+  }
+  
+  .text-diverz-pink-dark {
+    color: hsl(var(--color-primary-pink));
+  }
+  
+  .text-professional-dark {
+    color: hsl(var(--professional-dark));
+  }
+  
+  .text-professional-medium {
+    color: hsl(var(--professional-medium));
+  }
+  
+  .text-accent-orange {
+    color: hsl(var(--accent-orange));
+  }
+  
+  .text-accent-blue {
+    color: hsl(var(--accent-blue));
+  }
+  
+  .text-accent-success {
+    color: hsl(var(--accent-success));
+  }
+  
+  .text-accent-warning {
+    color: hsl(var(--accent-warning));
+  }
+  
+  /* Legacy aliases for backward compatibility */
+  .bg-industrial-red {
+    background-color: hsl(var(--industrial-red));
+  }
+  
+  .bg-industrial-dark {
+    background-color: hsl(var(--professional-dark));
+  }
+  
+  .bg-industrial-light {
+    background-color: hsl(var(--professional-lighter));
+  }
+  
+  .text-industrial-red {
+    color: hsl(var(--industrial-red));
+  }
+  
+  .text-industrial-dark {
+    color: hsl(var(--professional-dark));
+  }
+  
+  .text-industrial-gray {
+    color: hsl(var(--professional-medium));
+  }
+  
+  /* Animation utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+

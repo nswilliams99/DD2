@@ -1,0 +1,50 @@
+# Robots.txt for dumpsterdiverz.com
+User-agent: Googlebot
+Allow: /
+Allow: /about
+Allow: /services
+Allow: /residential
+Allow: /commercial
+Allow: /roll-off-dumpsters
+Allow: /contact
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: *
+Allow: /
+
+# Important pages for indexing priority
+Allow: /about
+Allow: /services
+Allow: /residential/*
+Allow: /commercial/*
+Allow: /roll-off-dumpsters/*
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Block admin and internal paths
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_vercel/
+Disallow: /.well-known/
+Disallow: /lovable-uploads/temp/
+
+# Allow search engines to crawl uploaded assets
+Allow: /lovable-uploads/*.jpg
+Allow: /lovable-uploads/*.png
+Allow: /lovable-uploads/*.webp
+
+# Block tracking parameters
+Disallow: /*?utm_*
+Disallow: /*?ref=*
+Disallow: /*?source=*
+
+Sitemap: https://www.dumpsterdiverz.com/sitemap.xml

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vectorization Debug Test</title>
+</head>
+<body>
+    <h1>Vectorization Debug Test</h1>
+    <button onclick="testDirectFunction()">Test Function Directly</button>
+    <button onclick="testWithSupabase()">Test With Supabase Client</button>
+    <pre id="output"></pre>
+
+    <script type="module">
+        import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.50.0';
+        
+        const supabase = createClient(
+            'https://cgizicrrzdbzvfniffhw.supabase.co',
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNnaXppY3JyemRienZmbmlmZmh3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDYwMzU1NjgsImV4cCI6MjA2MTYxMTU2OH0.eng3nYcSl6Voz7VcYE0P4flgKqlhrw2hf7DPBpG96Cc'
+        );
+        
+        window.supabase = supabase;
+        
+        window.log = function(message) {
+            const output = document.getElementById('output');
+            output.textContent += new Date().toISOString() + ': ' + message + '\n';
+            console.log(message);
+        };
+        
+        window.testDirectFunction = async function() {
+            document.getElementById('output').textContent = '';
+            log('🧪 Testing function directly...');
+            
+            try {
+                const response = await fetch('https://cgizicrrzdbzvfniffhw.supabase.co/functions/v1/vectorize-content', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNnaXppY3JyemRienZmbmlmZmh3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDYwMzU1NjgsImV4cCI6MjA2MTYxMTU2OH0.eng3nYcSl6Voz7VcYE0P4flgKqlhrw2hf7DPBpG96Cc'
+                    },
+                    body: JSON.stringify({
+                        content: 'Test content for debugging',
+                        contentType: 'vectorization_test',
+                        title: 'Debug Test',
+                        metadata: {
+                            record_id: 'd4aecb10-9fc8-4a1c-ab48-cd2bfc65bfbf',
+                            table_name: 'vectorization_test'
+                        }
+                    })
+                });
+                
+                log(`Response status: ${response.status}`);
+                
+                const responseText = await response.text();
+                log(`Response body: ${responseText}`);
+                
+                if (response.ok) {
+                    const data = JSON.parse(responseText);
+                    log(`✅ Success: ${JSON.stringify(data, null, 2)}`);
+                } else {
+                    log(`❌ Error: ${response.status} - ${responseText}`);
+                }
+                
+            } catch (error) {
+                log(`❌ Exception: ${error.message}`);
+            }
+        };
+        
+        window.testWithSupabase = async function() {
+            document.getElementById('output').textContent = '';
+            log('🧪 Testing with Supabase client...');
+            
+            try {
+                const { data, error } = await supabase.functions.invoke('vectorize-content', {
+                    body: {
+                        content: 'Test content via Supabase client',
+                        contentType: 'vectorization_test',
+                        title: 'Supabase Test',
+                        metadata: {
+                            record_id: 'd4aecb10-9fc8-4a1c-ab48-cd2bfc65bfbf',
+                            table_name: 'vectorization_test'
+                        }
+                    }
+                });
+                
+                if (error) {
+                    log(`❌ Supabase Error: ${JSON.stringify(error, null, 2)}`);
+                } else {
+                    log(`✅ Supabase Success: ${JSON.stringify(data, null, 2)}`);
+                }
+                
+            } catch (error) {
+                log(`❌ Exception: ${error.message}`);
+            }
+        };
+    </script>
+</body>
+</html>

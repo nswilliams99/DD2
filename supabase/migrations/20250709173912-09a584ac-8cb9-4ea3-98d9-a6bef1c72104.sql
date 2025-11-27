@@ -1,0 +1,6 @@
+INSERT INTO page_sections (page_slug, section_name, title, description, image_path, display_order)
+VALUES
+  ('roll-off', 'hero', 'Roll-Off Dumpster Rentals', 'Convenient roll-off containers for projects of any size in Northern Colorado.', 'https://cgizicrrzdbzvfniffhw.supabase.co/storage/v1/object/public/media/04_ro/rolloff-hero-residential-driveway.webp', 1),
+  ('roll-off', 'same-day', 'Same-Day Delivery Available', 'Need a dumpster today? We offer fast, same-day drop-offs to keep your project moving.', 'https://cgizicrrzdbzvfniffhw.supabase.co/storage/v1/object/public/media/04_ro/rolloff_sameday.webp', 2),
+  ('roll-off', 'flexible-periods', 'Flexible Rental Periods', 'Choose the rental length that works for your project — whether it''s 3 days, 7 days, or even longer. No stress, no surprise pickups.', 'https://cgizicrrzdbzvfniffhw.supabase.co/storage/v1/object/public/media/04_ro/rolloff_flexible_rental_calendar.webp', 3),
+  ('roll-off', 'delivery-section', 'Professional Delivery Service', 'Our experienced drivers will carefully place your dumpster exactly where you need it, ensuring safe and convenient access for your project.', 'https://cgizicrrzdbzvfniffhw.supabase.co/storage/v1/object/public/media/04_ro/rolloff_delivery_resi_driveway.webp.png', 4);
