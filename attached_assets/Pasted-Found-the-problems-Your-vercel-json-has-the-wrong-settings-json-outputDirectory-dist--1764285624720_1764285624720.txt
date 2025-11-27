@@ -1,3 +1,15 @@
+Found the problems! Your `vercel.json` has the wrong settings:
+
+```json
+"outputDirectory": "dist",
+"framework": null,
+```
+
+This is overriding everything and causing the 404. You need to fix `vercel.json`.
+
+Replace the entire contents of `vercel.json` with this:
+
+```json
 {
   "framework": "nextjs",
   "redirects": [
@@ -94,3 +106,18 @@
     }
   ]
 }
+```
+
+Key changes:
+- **Removed** `"buildCommand"` and `"outputDirectory"` — let Vercel auto-detect
+- **Changed** `"framework": null` to `"framework": "nextjs"`
+- **Removed** the `rewrites` section (the SPA rewrite to `index.html` breaks Next.js)
+- Simplified some redirects
+
+After saving, commit and push:
+
+```bash
+git add vercel.json
+git commit -m "Fix vercel.json for Next.js"
+git push origin main
+```
